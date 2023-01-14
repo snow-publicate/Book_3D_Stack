@@ -45,7 +45,7 @@ public class camera_control : MonoBehaviour
             }
         }
 
-        //키보드 W키나 아래쪽 화살표키를 누르면 카메라를 대상 기준 상단방향으로 회전
+        //키보드 W키나 위쪽 화살표키를 누르면 카메라를 대상 기준 상단방향으로 회전
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && GetComponent<Camera>().fieldOfView > 45.0f)
         {
             if (transform.position.y < 8f)
