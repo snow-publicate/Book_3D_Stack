@@ -24,16 +24,16 @@ public class camera_control : MonoBehaviour
         point = new Vector3(target.transform.position.x,target.transform.position.y+3f,target.transform.position.z);
         transform.LookAt(point); //카메라가 바라볼 대상 적용
 
-        //키보드 A키나 왼쪽 화살표키를 누르면 카메라를 대상 기준 시계방향으로 회전
+        //키보드 A키나 왼쪽 화살표키를 누르면 카메라를 대상 기준 반시계방향으로 회전
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) 
         {
-            transform.RotateAround(point, Vector3.down, Time.deltaTime * speedMod * 20f);
+            transform.RotateAround(point, Vector3.up, Time.deltaTime * speedMod * 20f);
         }
 
-        //키보드 D키나 오른쪽 화살표키를 누르면 카메라를 대상 기준 반시계방향으로 회전
+        //키보드 D키나 오른쪽 화살표키를 누르면 카메라를 대상 기준 시계방향으로 회전
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            transform.RotateAround(point, Vector3.up, Time.deltaTime * speedMod * 20f);
+            transform.RotateAround(point, Vector3.down, Time.deltaTime * speedMod * 20f);
         }
 
         //키보드 S키나 아래쪽 화살표키를 누르면 카메라를 대상 기준 하단방향으로 회전

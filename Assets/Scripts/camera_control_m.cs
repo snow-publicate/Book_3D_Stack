@@ -122,14 +122,14 @@ public class camera_control_m : MonoBehaviour
     }
 
     //그 외 카메라 위치, 각도 조정 함수 모음
-    private void TouchLeft() //누르면 카메라를 대상 기준 시계방향으로 회전
-    {
-        transform.RotateAround(point, Vector3.down, Time.deltaTime * speedMod * 20f);
-    }
-
-    private void TouchRight() //누르면 카메라를 대상 기준 반시계방향으로 회전
+    private void TouchLeft() //누르면 카메라를 대상 기준 반시계방향으로 회전
     {
         transform.RotateAround(point, Vector3.up, Time.deltaTime * speedMod * 20f);
+    }
+
+    private void TouchRight() //누르면 카메라를 대상 기준 시계방향으로 회전
+    {
+        transform.RotateAround(point, Vector3.down, Time.deltaTime * speedMod * 20f);
     }
 
     private void TouchDown() //누르면 카메라를 대상 기준 하단방향으로 회전
